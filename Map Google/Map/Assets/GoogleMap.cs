@@ -26,6 +26,18 @@ public class GoogleMap : MonoBehaviour {
 			Refresh();
 	}
 
+	public void OnClick_ZoomIn_Button()
+	{
+		zoom += 1;
+		Refresh ();
+	}
+
+	public void OnClick_ZoomOut_Button()
+	{
+		zoom -= 1;
+		Refresh ();
+	}
+
 	public void Refresh() {
 		if (autoLocateCenter && (markers.Length == 0 && paths.Length == 0)) {
 			Debug.LogError("Auto Center will only work if paths or markers are used.");
